@@ -28,7 +28,7 @@ $watch_link = get_field('watch-link');
                             </p>
                             
                             <div class="carousel-btn">
-                                <a class="btn btn-custom donate-home" href="./donate.html"> <?php echo $donate_text ?></a>
+                                <a class="btn btn-custom donate-home" href="/donate"> <?php echo $donate_text ?></a>
                                 <a class="btn btn-custom btn-play" href="https://www.youtube.com/shorts/VQHQfPRULIo"  target="_blank"> <?php echo $watch_text ?></a>
 
                             </div>
@@ -47,7 +47,7 @@ $watch_link = get_field('watch-link');
                             </p>
                             
                             <div class="carousel-btn">
-                                <a class="btn btn-custom donate-home" href="./donate.html"> <?php echo $donate_text ?></a>
+                                <a class="btn btn-custom donate-home" href="/donate"> <?php echo $donate_text ?></a>
                                 <a class="btn btn-custom btn-play" href="https://www.youtube.com/shorts/VQHQfPRULIo"  target="_blank"> <?php echo $watch_text ?></a>
 
                             </div>
@@ -66,7 +66,7 @@ $watch_link = get_field('watch-link');
                             </p>
                             
                             <div class="carousel-btn">
-                                <a class="btn btn-custom donate-home" href="./donate.html"> <?php echo $donate_text ?></a>
+                                <a class="btn btn-custom donate-home" href="/donate"> <?php echo $donate_text ?></a>
                                 <a class="btn btn-custom btn-play" href="https://www.youtube.com/shorts/VQHQfPRULIo"  target="_blank"> <?php echo $watch_text ?></a>
 
                             </div>
@@ -86,7 +86,7 @@ $watch_link = get_field('watch-link');
                             </p>
                             
                             <div class="carousel-btn">
-                                <a class="btn btn-custom donate-home" href="./donate.html"> <?php echo $donate_text ?></a>
+                                <a class="btn btn-custom donate-home" href="/donate"> <?php echo $donate_text ?></a>
                                 <a class="btn btn-custom btn-play" href="https://www.youtube.com/shorts/VQHQfPRULIo"  target="_blank"> <?php echo $watch_text ?></a>
 
                             </div>
@@ -98,97 +98,95 @@ $watch_link = get_field('watch-link');
         <!-- Carousel End -->
 
 
-        <!-- About Start -->
-        <div class="about">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="about-img" data-parallax="scroll" > <img src="<?php echo get_theme_file_uri('img/about.jpg')?>" class='about-img' alt="" srcset=""></div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="section-header">
-                            <p>Learn About Us</p>
-                            <h2>Taita Taveta County - Community-Based organization</h2>
-                        </div>
-                        <div class="about-tab">
-                            <ul class="nav nav-pills nav-justified">
-                                <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="pill" href="#tab-content-1">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="pill" href="#tab-content-2">Mission</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="pill" href="#tab-content-3">Vision</a>
-                                </li>
-                            </ul>
+		<!-- Start About -->
+		<section id="mu-about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-about-area">
+							<!-- Title -->
+							<div class="row">
+								<div class="col-md-12">
+									<div class="mu-title">
+										<h2>About Us</h2>
+										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa cum sociis.</p>
+									</div>
+								</div>
+							</div>
+							<!-- Start Feature Content -->
+							<div class="row">
+								<div class="col-md-6">
+									<div class="mu-about-left">
+										<img class="" src="assets/images/about-us.jpg" alt="img">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="mu-about-right">
+										<ul>
+											<li>
+												<h3>Our Mission</h3>
+												<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
+											</li>
+											<li>
+												<h3>Our Vision</h3>
+												<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
+											</li>
+											<li>
+												<h3>Our Valuse</h3>
+												<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- End Feature Content -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End About -->
 
-                            <div class="tab-content">
-                                <div id="tab-content-1" class="container tab-pane active">
-                                    Mvono Community Centre (MCC) is a Taita Taveta County organization focused on helping orphans and widows. 
-                                    It was founded under divine guidance in May 2004 by Reverend Violet Chanya, following a direct call from God.
-                        
-                                </div>
-                                <div id="tab-content-2" class="container tab-pane fade">
-                                    Empowering and promoting the well-being of the less fortunate.
-                                </div>
-                                <div id="tab-content-3" class="container tab-pane fade">
-                                    To give decent living through providing basic needs and support to orphaned & vulnerable children, widows and Gender Based Violence Victims
+<!--  -->
+   
+<!-- Service Start -->
+<div class="service">
+    <div class="container">
+        <div class="section-header text-center">
+            <p>What We Do?</p>
+            <h3>We give dignity and a future to orphans and the vulnerable in Taita Taveta.</h3>
+        </div>
+        <div class="row">
+            <?php if (have_rows('icon')) : ?>
+                <?php while (have_rows('icon')) : the_row(); ?>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="<?php echo esc_attr(get_sub_field('icon')); ?>"></i>
+                            </div>
+                            <div class="service-text">
+                                <h3><?php echo esc_html(get_sub_field('title')); ?></h3>
+                                <ul>
+                                    <?php
+                                    $description_lines = explode("\n", esc_html(get_sub_field('description')));
+                                    foreach ($description_lines as $line) {
+                                        echo '<li>' . esc_html($line) . '</li>';
+                                    }
+                                    ?>
+                                </ul>
+                                <div class="carousel-btn">
+                                    <a class="btn btn-static" href="./donate.html">Donate Now</a>
+                                    <a class="btn m" href="orphans.html">Learn More</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- About End -->
-
-<!--  -->
-   
-      <!-- Service Start -->
-      <div class="service">
-        <div class="container">
-            <div class="section-header text-center">
-                <p>What We Do?</p>
-                <h3>We give dignity and a future to orphans and the vulnerable in Taita Taveta
-                    .</h3>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="service-item">
-                            <?php if (have_rows('icon')) : ?>
-                                <?php while (have_rows('icon')) : the_row(); ?>
-                                    <div class="service-icon">
-                                        <i class="<?php echo esc_attr(get_sub_field('icon')); ?>"></i>
-                                    </div>
-                                    <div class="service-text">
-                                        <h3><?php echo esc_html(get_sub_field('title')); ?></h3>
-                                        <ul>
-                                            <?php
-                                            $description_lines = explode("\n", esc_html(get_sub_field('description')));
-                                            foreach ($description_lines as $line) {
-                                                echo '<li>' . esc_html($line) . '</li>';
-                                            }
-                                            ?>
-                                        </ul>
-                                        <div class="carousel-btn">
-                                            <a class="btn btn-static" href="./donate.html">Donate Now</a>
-                                            <a class="btn m" href="orphans.html">Learn More</a>
-                                        </div>
-                                    </div>
-                                <?php endwhile; ?>
-                            <?php endif; ?>
-                        </div>
-
-                </div>
-                
-
-                
-                
-            </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
         </div>
     </div>
-    <!-- Service End -->
+</div>
+<!-- Service End -->
 
         
     
@@ -280,7 +278,7 @@ $watch_link = get_field('watch-link');
 
         
         <!-- Volunteer Start -->
-        <div class="volunteer" data-parallax="scroll" data-image-src="img/volunteer.jpg">
+        <div class="volunteer" data-parallax="scroll" data-image-src="<?php echo get_theme_file_uri('img/volunteer.jpg') ?>">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-5">

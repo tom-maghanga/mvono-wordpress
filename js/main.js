@@ -47,22 +47,22 @@
                         
             $(document).ready(function(){
                 $('#about-us').on('mousedown', function(event){
-                    window.location.href= 'about.html';
+                    window.location.href= 'about';
                 });
             });
             $(document).ready(function(){
                 $('#what-we-do').on('mousedown', function(event){
-                    window.location.href= 'causes.html';
+                    window.location.href= 'what-we-do';
                 });
             });
             $(document).ready(function(){
                 $('#get-involved').on('mousedown', function(event){
-                    window.location.href= 'volunteer.html';
+                    window.location.href= 'volunteer';
                 });
             });
             $(document).ready(function(){
                 $('#news-events').on('mousedown', function(event){
-                    window.location.href= 'event.html';
+                    window.location.href= 'news';
                 });
             });
                 $('.navbar .dropdown').on('mouseover', function () {

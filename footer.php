@@ -55,7 +55,7 @@
                         <p>&copy; <a href="#">Mvono 2004-2023</a>, All Right Reserved.</p>
                     </div>
                     <div class="col-md-6">
-                        <p>Designed By <a href="https://htmlcodex.com">metafocus designs</a></p>
+                        <p>Designed By <a>metafocus designs</a></p>
                     </div>
                 </div>
             </div>

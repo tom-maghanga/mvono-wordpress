@@ -598,7 +598,7 @@ a:focus {
     margin-bottom: 45px;
     padding: 210px 0 90px 0;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/page-header.jpg);
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('http://mvono-community.local/wp-content/uploads/2023/11/page-header.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -764,61 +764,78 @@ a:focus {
 }
 
 
-/*******************************/
-/********** About CSS **********/
-/*******************************/
+/*--------------------*/
+/* ABOUT US */
+/*--------------------*/
 
-.about {
-    position: relative;
-    width: 100%;
-    padding: 45px 0;
+
+#mu-about {
+	background-color: #fff;
+	display: inline;
+	float: left;
+	width: 100%;
 }
 
-.about .section-header {
-    margin-bottom: 30px;
-    margin-left: 0;
+.mu-about-area {
+	display: inline;
+	float: left;
+	padding: 100px 0;
+	width: 100%;
 }
 
-.about .about-img {
-    width: 100%;
-    height: 100vh;
+.mu-title {
+	display: inline;
+	float: left;
+	text-align: center;
+	width: 100%;
+	margin-bottom: 35px;
+	padding: 0 25%;
 }
 
-.about .about-tab {
-    width: 100%;
+.mu-title h2 {
+	color: #323232;
+	font-size: 30px;
+	text-transform: uppercase;
+	margin-bottom: 15px;
 }
 
+.mu-title p {
 
-.about .about-tab .nav.nav-pills .nav-link {
-    padding: 8px;
-    font-weight: 600;
-    background: none;
-    border-radius: 0;
-    background-color: #4a4c70;
-    border-bottom: 1px solid rgba(0, 0, 0, .15);
-    transition: none;
 }
 
-.about .about-tab .nav.nav-pills .nav-link:hover,
-.about .about-tab .nav.nav-pills .nav-link.active {
-    color: #FDBE33;
-    padding-bottom: 7px;
-    border-bottom: 3px solid #FDBE33;
+.mu-about-left {
+	display: inline;
+	float: left;
+	padding-right: 15px;
+	width: 100%;
 }
 
-.about .about-tab .tab-content {
-    padding: 15px 0 0 0;
-    background: transparent;
+.mu-about-right {
+	display: inline;
+	float: left;
+	padding-left: 15px;
+	width: 100%
 }
 
-.about .about-tab .tab-content .container {
-    padding: 0;
+.mu-about-right ul {}
+
+.mu-about-right ul li {
+	list-style: none;
+	float: left;
+	margin-bottom: 25px;
 }
 
-@media (max-width: 991.98px) {
-    .about .section-header {
-        margin-top: 30px;
-    }
+.mu-about-right ul li h3 {
+	border-bottom: 3px solid #e5e5e5;
+	color: #323232;
+	font-size: 20px;
+	display: inline-block;
+	padding-bottom: 5px;
+	margin-bottom: 15px;
+}
+
+.mu-about-right p {
+	font-size: 14px;
 }
 
 

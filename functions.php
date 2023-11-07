@@ -48,7 +48,8 @@ function enqueue_custom_scripts() {
     wp_enqueue_script('counterup','https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js', array(), null, true);
 
     // Parallax
-    wp_enqueue_script('parallax','https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js', array(), null, true);
+    wp_enqueue_script('parallax',  get_template_directory_uri() . '/lib/parallax/parallax.min.js', array(), null, true);
+  
 
     // Contact Form Validation
     wp_enqueue_script('jqBootstrapValidation', get_template_directory_uri() . '/mail/jqBootstrapValidation.min.js', array(), null, true);
@@ -61,6 +62,7 @@ function enqueue_custom_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+
 
 
 
