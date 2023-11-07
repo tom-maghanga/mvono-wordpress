@@ -78,6 +78,7 @@
         $(window).resize(toggleNavbarMethod);
     });
 
+    
  
     
     // Main carousel

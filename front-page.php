@@ -98,54 +98,64 @@ $watch_link = get_field('watch-link');
         <!-- Carousel End -->
 
 
-		<!-- Start About -->
-		<section id="mu-about">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="mu-about-area">
-							<!-- Title -->
-							<div class="row">
-								<div class="col-md-12">
-									<div class="mu-title">
-										<h2>About Us</h2>
-										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa cum sociis.</p>
-									</div>
-								</div>
-							</div>
-							<!-- Start Feature Content -->
-							<div class="row">
-								<div class="col-md-6">
-									<div class="mu-about-left">
-										<img class="" src="assets/images/about-us.jpg" alt="img">
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="mu-about-right">
-										<ul>
-											<li>
-												<h3>Our Mission</h3>
-												<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
-											</li>
-											<li>
-												<h3>Our Vision</h3>
-												<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
-											</li>
-											<li>
-												<h3>Our Valuse</h3>
-												<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<!-- End Feature Content -->
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End About -->
+
+<section id="">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-about-area">
+                    <!-- Title -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-header text-center">
+                                <h2>About Us</h2>
+                                <p><?php echo get_post_meta(get_the_ID(), 'about_title', true); ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Start Feature Content -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mu-about-left">
+                            <?php
+                                $image_id = get_post_meta(get_the_ID(), 'about_img', true);
+                                $image_url = wp_get_attachment_image_url($image_id, 'full'); // 'full' size can be changed to match your image size requirements
+                                if ($image_url) {
+                                    // echo '<img src="' . esc_url($image_url) . '" alt="img">';
+                                }
+                                ?>
+                                <img class="" src="<?php echo esc_url($image_url); ?>" height="350px" width="500px" alt="img">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mu-about-right">
+                            <h3>About Us</h3>
+                                <p><?php echo get_post_meta(get_the_ID(), 'about_text', true); ?></p>
+                                <div class="carousel-btn">
+                                    <a class="btn btn-static" href="/about">Learn more</a>
+                                </div>
+                                <h3>Our Mission</h3>
+                                <p><?php echo get_post_meta(get_the_ID(), 'mission_text', true); ?></p>
+                                <div class="carousel-btn">
+                                    <a class="btn btn-static" href="/what-we-do">Learn more</a>
+                                </div>
+                                <h3>Our Vision</h3>
+                                <p><?php echo get_post_meta(get_the_ID(), 'vision_text', true); ?></p>
+                                <div class="carousel-btn">
+                                    <a class="btn btn-static" href="/programs">Learn more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Feature Content -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
 
 <!--  -->
    
@@ -175,8 +185,8 @@ $watch_link = get_field('watch-link');
                                     ?>
                                 </ul>
                                 <div class="carousel-btn">
-                                    <a class="btn btn-static" href="./donate.html">Donate Now</a>
-                                    <a class="btn m" href="orphans.html">Learn More</a>
+                                    <a class="btn btn-static" href="/donate">Donate Now</a>
+                                    <a class="btn m" href="">Learn More</a>
                                 </div>
                             </div>
                         </div>
@@ -193,7 +203,7 @@ $watch_link = get_field('watch-link');
 
         
              <!-- Donate Start -->
-             <div class="donate" data-parallax="scroll" data-image-src="<?php echo get_theme_file_uri('img/donate.jpg') ?>">
+             <!-- <div class="donate" data-parallax="scroll" data-image-src="<?php echo get_theme_file_uri('img/donate.jpg') ?>">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-7">
@@ -237,7 +247,7 @@ $watch_link = get_field('watch-link');
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- Donate End -->
             
         
