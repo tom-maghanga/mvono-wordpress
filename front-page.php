@@ -340,12 +340,15 @@ $watch_link = get_field('watch-link');
     <h2>Donate</h2>
         <p></p>
     </div>
-    <section class="donate_section">
+    <?php
+        $background_image = get_field('background_image'); // Retrieve background image URL from ACF field
+    ?>
+    <section class="donate_section" style="background-image: url('<?php echo esc_url($background_image['url']); ?>'); background-size: cover; margin-bottom: 35px; padding: 87px 20px 107px;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 for-padding">
-                    <p>Your donations will help us build an orphanage, feed & educate the children</p>
-                    <h2><a href="/donate">DONATE NOW</a></h2>
+                    <p><?php echo get_field('donate_text') ?></p>
+                    <h2><a href="/donate"><?php echo get_field('donate_button') ?></a></h2>
                 </div>
             </div>
         </div>
