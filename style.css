@@ -32,7 +32,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-    color: #FDBE33;
+    color: #28B2C7;
     outline: none;
     text-decoration: none;
 }
@@ -44,8 +44,8 @@ a:focus {
     font-weight: 500;
     color: #777777;
     border-radius: 0;
-    border: 2px solid #FDBE33;
-    box-shadow: inset 0 0 0 0 #FDBE33;
+    border: 2px solid #28B2C7;
+    box-shadow: inset 0 0 0 0 #28B2C7;
     transition: ease-out 0.3s;
     -webkit-transition: ease-out 0.3s;
     -moz-transition: ease-out 0.3s;
@@ -53,19 +53,19 @@ a:focus {
 }
 
 .donate-home{
-    color: #FDBE33;
-    background-color: #FDBE33;
+    color: #28B2C7;
+    background-color: #28B2C7;
     border: 1px solid #ffffff;
     box-shadow: inset 0 0 0 30px #ffffff;
 }
 .btn.btn-custom:hover {
     color: #20212B;
-    box-shadow: inset 0 0 0 30px #FDBE33;
+    box-shadow: inset 0 0 0 30px #28B2C7;
 }
 
 .btn-static{
     color: #ffffff;
-    box-shadow: inset 0 0 0 30px #FDBE33;
+    box-shadow: inset 0 0 0 30px #28B2C7;
 }
 
 .btn:focus,
@@ -118,7 +118,7 @@ a:focus {
     width: 45px;
     height: 45px;
     border: 5px solid #dddddd;
-    border-top: 5px solid #FDBE33;
+    border-top: 5px solid #28B2C7;
     border-radius: 50%;
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
@@ -137,7 +137,7 @@ a:focus {
 .back-to-top {
     position: fixed;
     display: none;
-    background: #FDBE33;
+    background: #28B2C7;
     width: 44px;
     height: 44px;
     text-align: center;
@@ -159,7 +159,7 @@ a:focus {
 }
 
 .back-to-top:hover i {
-    color: #FDBE33;
+    color: #28B2C7;
 }
 
 
@@ -205,7 +205,7 @@ a:focus {
 
 .top-bar .text i {
     font-size: 16px;
-    color: #FDBE33;
+    color: #28B2C7;
     margin-right: 5px;
 }
 
@@ -230,7 +230,7 @@ a:focus {
     width: 45px;
     height: 100%;
     font-size: 16px;
-    color: #FDBE33;
+    color: #28B2C7;
     border-right: 1px solid rgba(255, 255, 255, .3);
 }
 
@@ -240,7 +240,7 @@ a:focus {
 
 .top-bar .social a:hover {
     color: #ffffff;
-    background: #FDBE33;
+    background: #28B2C7;
 }
 
 .top-btn{
@@ -297,7 +297,7 @@ a:focus {
 }
 
 .social-2{
-    color: #FDBE33;
+    color: #28B2C7;
 }
 
 .fab-i{
@@ -305,7 +305,7 @@ a:focus {
     color: #f8f9fa;
 }
 .fab-i:hover{
-    color: #FDBE33;
+    color: #28B2C7;
 
 }
 .contact-top{
@@ -334,7 +334,7 @@ a:focus {
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    color: #FDBE33;
+    color: #28B2C7;
     transition: none;
 }
 
@@ -346,7 +346,7 @@ a:focus {
 }
 
 .dropdown-item :hover{
-    color: #FDBE33;
+    color: #28B2C7;
 }
 
 @media (min-width: 992px) {
@@ -503,7 +503,7 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FDBE33;
+    color: #28B2C7;
     background: rgba(256, 256, 256, .2);
     font-size: 22px;
     transition: .3s;
@@ -512,7 +512,7 @@ a:focus {
 .carousel .owl-nav .owl-prev:hover,
 .carousel .owl-nav .owl-next:hover {
     color: #ffffff;
-    background: #FDBE33;
+    background: #28B2C7;
 }
 
 .carousel .owl-nav .owl-prev {
@@ -620,7 +620,7 @@ a:focus {
    margin-right: 15rem;
 }
 .page-item{
-    background-color: #FDBE33;
+    background-color: #28B2C7;
     font-size: 1.5rem;
     border-radius: 0.5rem;
 }
@@ -629,7 +629,7 @@ a:focus {
 }
 
 .nav-i{
-    color: #FDBE33;
+    color: #28B2C7;
 
 }
 .nav-i:hover{
@@ -641,7 +641,7 @@ a:focus {
 
 .page-header h2 {
     position: relative;
-    color: #FDBE33;
+    color: #28B2C7;
     font-size: 60px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -655,12 +655,12 @@ a:focus {
     height: 2px;
     left: calc(50% - 50px);
     bottom: 0;
-    background: #FDBE33;
+    background: #28B2C7;
 }
 
 
 .page-header a {
-    background-color: #FDBE33;
+    background-color: #28B2C7;
     width: 100px;
     height: 20px;
     border-radius: 2px;
@@ -736,7 +736,7 @@ a:focus {
     font-size: 22px;
     font-weight: 600;
     text-transform: capitalize;
-    color: #FDBE33;
+    color: #28B2C7;
 }
 
 .section-header h2 {
@@ -767,6 +767,8 @@ a:focus {
 /*--------------------*/
 /* ABOUT US */
 /*--------------------*/
+
+
 
 
 #mu-about {
@@ -854,6 +856,67 @@ a:focus {
     transition: none;
 }
 
+/*******************************/
+/********** About CSS **********/
+/*******************************/
+
+.about {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+}
+
+.about .section-header {
+    margin-bottom: 30px;
+    margin-left: 0;
+}
+
+.about .about-img {
+    width: 100%;
+    height: 100vh;
+}
+
+.about .about-tab {
+    width: 100%;
+}
+
+.about-head{
+    margin-bottom:  -100px;
+
+}
+
+.about .about-tab .nav.nav-pills .nav-link {
+    padding: 8px;
+    font-weight: 600;
+    background: none;
+    border-radius: 0;
+    background-color: #4a4c70;
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+    transition: none;
+}
+
+.about .about-tab .nav.nav-pills .nav-link:hover,
+.about .about-tab .nav.nav-pills .nav-link.active {
+    color: #28B2C7;
+    padding-bottom: 7px;
+    border-bottom: 3px solid #28B2C7;
+}
+
+.about .about-tab .tab-content {
+    padding: 15px 0 0 0;
+    background: transparent;
+}
+
+.about .about-tab .tab-content .container {
+    padding: 0;
+}
+
+@media (max-width: 991.98px) {
+    .about .section-header {
+        margin-top: 20px;
+    }
+}
+
 
 
 /*******************************/
@@ -882,7 +945,7 @@ a:focus {
 .service .service-icon i {
     position: relative;
     display: block;
-    color: #FDBE33;
+    color: #28B2C7;
     font-size: 60px;
     line-height: 60px;
     margin-top: 5px;
@@ -911,7 +974,7 @@ a:focus {
     height: 40px;
     top: calc(50% - 20px);
     left: -1px;
-    background: #FDBE33;
+    background: #28B2C7;
 }
 
 .service .service-text h3 {
@@ -969,7 +1032,7 @@ a:focus {
 }
 
 .donate-btn{
-    color: #FDBE33;
+    color: #28B2C7;
     border: 1px solid #ffffff;
     box-shadow: inset 0 0 0 30px #ffffff;
     padding: 15px 0;
@@ -1011,7 +1074,7 @@ a:focus {
 
 .donate .donate-form {
     padding: 90px 30px;
-    background: #FDBE33;
+    background: #28B2C7;
 }
 
 .donate .donate-form .control-group {
@@ -1053,14 +1116,14 @@ a:focus {
     
 }
 .donate-home{
-    color: #FDBE33;
+    color: #28B2C7;
     border: 1px solid #ffffff;
     box-shadow: inset 0 0 0 30px #ffffff;
 }
 
 .donate .donate-form .btn.btn-custom:hover,
 .donate .donate-form .btn.btn-custom.active {
-    color: #FDBE33;
+    color: #28B2C7;
     border: 1px solid #ffffff;
     box-shadow: inset 0 0 0 30px #ffffff;
 }
@@ -1118,7 +1181,7 @@ a:focus {
 .causes .progress .progress-bar {
     position: relative;
     width: 0px;
-    background: #FDBE33;
+    background: #28B2C7;
     overflow: visible;
     transition: 2s;
 }
@@ -1130,7 +1193,7 @@ a:focus {
     height: 23px;
     display: inline-block;
     padding: 2px 6px;
-    background: #FDBE33;
+    background: #28B2C7;
     color: #20212B;
 }
 
@@ -1142,7 +1205,7 @@ a:focus {
     top: 23px;
     left: calc(50% - 6px);
     border: 6px solid;
-    border-color: #FDBE33 transparent transparent transparent;
+    border-color: #28B2C7 transparent transparent transparent;
 }
 
 .causes .progress-text {
@@ -1181,13 +1244,69 @@ a:focus {
 
 .causes .causes-btn .btn:last-child {
     color: #20212B;
-    background: #FDBE33;
+    background: #28B2C7;
 }
 
 .causes .causes-btn .btn:last-child:hover {
     color: #ffffff;
 }
 
+
+
+
+
+.donate_section {
+    position: relative;
+    background-image: url("img/about.jpg");
+    background-size: cover;
+    margin-bottom: 35px;
+    padding: 87px 20px 107px;
+    /* Set the height and other styles for your section as needed */
+}
+
+.donate_section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1eb464; /* Green color for the overlay */
+    opacity: 0.7; /* Adjust the opacity as needed (0.7 means 70% opacity) */
+}
+
+
+
+
+.donate_section h2 {
+    margin-top: 120px;
+    text-align: center;
+}
+
+.donate_section h2 a {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 30px;
+    color: #05ce68;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 15px 40px;
+    text-decoration: none;
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+.donate_section h2 a:hover{
+    background-color: #4a4c70;
+    color: #dddddd;
+}
+.donate_section p {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: -30px;
+}
 
 
 /*******************************/
@@ -1213,7 +1332,7 @@ a:focus {
     margin-top: 10px;
     font-size: 60px;
     line-height: 60px;
-    color: #FDBE33;
+    color: #28B2C7;
 }
 
 .facts .facts-text {
@@ -1322,13 +1441,13 @@ a:focus {
     text-align: center;
     font-size: 14px;
     color: #4a4c70;
-    border: 2px solid #FDBE33;
+    border: 2px solid #28B2C7;
     transition: .3s;
 }
 
 .team .team-social a:hover {
     color: #20212B;
-    background: #FDBE33;
+    background: #28B2C7;
 }
 
 .team .team-item:hover .team-text {
@@ -1403,7 +1522,7 @@ a:focus {
     width: 12px;
     height: 12px;
     border-radius: 0;
-    background: #FDBE33;
+    background: #28B2C7;
 }
 
 .testimonial .owl-dot.active {
@@ -1448,7 +1567,7 @@ a:focus {
 
 .volunteer .volunteer-form {
     padding: 90px 30px;
-    background: #FDBE33;
+    background: #28B2C7;
 }
 
 .volunteer .volunteer-form .control-group {
@@ -1489,7 +1608,7 @@ a:focus {
 }
 
 .volunteer .volunteer-form .btn.btn-custom:hover {
-    color: #FDBE33;
+    color: #28B2C7;
     border: 1px solid #ffffff;
     box-shadow: inset 0 0 0 30px #ffffff;
 }
@@ -1564,7 +1683,7 @@ a:focus {
     height: 40px;
     top: calc(50% - 20px);
     left: -1px;
-    background: #FDBE33;
+    background: #28B2C7;
 }
 
 .event .event-text h3 {
@@ -1654,7 +1773,7 @@ a:focus {
 }
 
 .blog .blog-text h3 a:hover {
-    color: #FDBE33;
+    color: #28B2C7;
 }
 
 .blog .blog-text p {
@@ -1701,7 +1820,7 @@ a:focus {
 
 .blog .pagination .page-link:hover,
 .blog .pagination .page-item.active .page-link {
-    color: #FDBE33;
+    color: #28B2C7;
     background: #4a4c70;
 }
 
@@ -1756,8 +1875,8 @@ a:focus {
 
 .single .single-tags a:hover {
     color: #ffffff;
-    background: #FDBE33;
-    border-color: #FDBE33;
+    background: #28B2C7;
+    border-color: #28B2C7;
 }
 
 .single .single-bio {
@@ -1835,7 +1954,7 @@ a:focus {
 }
 
 .single .post-item .post-text a:hover {
-    color: #FDBE33;
+    color: #28B2C7;
 }
 
 .single .post-item .post-meta {
@@ -1877,14 +1996,14 @@ a:focus {
     align-items: center;
     justify-content: center;
     color: #4a4c70;
-    background: #FDBE33;
+    background: #28B2C7;
     font-size: 16px;
     transition: .3s;
 }
 
 .single .related-slider .owl-nav .owl-prev:hover,
 .single .related-slider .owl-nav .owl-next:hover {
-    color: #FDBE33;
+    color: #28B2C7;
     background: #4a4c70;
 }
 
@@ -1950,7 +2069,7 @@ a:focus {
 }
 
 .single .comment-text .btn:hover {
-    background: #FDBE33;
+    background: #28B2C7;
 }
 
 .single .comment-form {
@@ -1979,7 +2098,7 @@ a:focus {
 
 .single .comment-form input:focus,
 .single .comment-form textarea:focus {
-    border-color: #FDBE33;
+    border-color: #28B2C7;
 }
 
 
@@ -2017,7 +2136,7 @@ a:focus {
     height: 2px;
     bottom: 0;
     left: 0;
-    background: #FDBE33;
+    background: #28B2C7;
 }
 
 .sidebar .sidebar-widget .search-widget {
@@ -2032,7 +2151,7 @@ a:focus {
 
 .sidebar .search-widget input:focus {
     box-shadow: none;
-    border-color: #FDBE33;
+    border-color: #28B2C7;
 }
 
 .sidebar .search-widget .btn {
@@ -2042,7 +2161,7 @@ a:focus {
     height: 40px;
     padding: 0;
     font-size: 25px;
-    color: #FDBE33;
+    color: #28B2C7;
     background: none;
     border-radius: 0;
     border: none;
@@ -2063,13 +2182,13 @@ a:focus {
 
 .sidebar .tab-post .nav.nav-pills .nav-link {
     color: #4a4c70;
-    background: #FDBE33;
+    background: #28B2C7;
     border-radius: 0;
 }
 
 .sidebar .tab-post .nav.nav-pills .nav-link:hover,
 .sidebar .tab-post .nav.nav-pills .nav-link.active {
-    color: #FDBE33;
+    color: #28B2C7;
     background: #4a4c70;
 }
 
@@ -2110,7 +2229,7 @@ a:focus {
     content: '\f105';
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
-    color: #FDBE33;
+    color: #28B2C7;
     left: 1px;
 }
 
@@ -2137,8 +2256,8 @@ a:focus {
 
 .single .tag-widget a:hover {
     color: #ffffff;
-    background: #FDBE33;
-    border-color: #FDBE33;
+    background: #28B2C7;
+    border-color: #28B2C7;
 }
 
 .sidebar .image-widget {
@@ -2181,7 +2300,7 @@ a:focus {
     margin-bottom: 30px;
     font-size: 22px;
     font-weight: 700;
-    color: #FDBE33;
+    color: #28B2C7;
 }
 
 .footer .footer-link a {
@@ -2200,7 +2319,7 @@ a:focus {
 }
 
 .footer .footer-link a:hover {
-    color: #FDBE33;
+    color: #28B2C7;
     letter-spacing: 1px;
 }
 
@@ -2271,7 +2390,7 @@ a:focus {
 }
 
 .footer .copyright p a:hover {
-    color: #FDBE33;
+    color: #28B2C7;
 }
 .row-footer{
     margin: 2rem;

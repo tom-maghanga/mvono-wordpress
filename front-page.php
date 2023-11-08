@@ -17,7 +17,15 @@ $watch_link = get_field('watch-link');
                 <div class="owl-carousel">
                     <div class="carousel-item">
                         <div class="carousel-img">
-                            <img src="<?php echo get_theme_file_uri('img/carousel-1.jpg')?>" alt="Image">
+                        <?php
+                                $c1_image_id = get_post_meta(get_the_ID(), 'carousel_1', true);
+                                $c1_image_url = wp_get_attachment_image_url($c1_image_id, 'full'); // 'full' size can be changed to match your image size requirements
+                                if ($c1_image_url) {
+                                   // echo '<img src="' . esc_url($c1_image_url) . '" alt="img">';
+                                }
+                                ?>
+                                 <img class="img-fluid" src="<?php echo esc_url($c1_image_url); ?>" height="830" width="auto" alt="Image">
+                          
                         </div>
                         <div class="carousel-text">
                             <h1><?php echo $big_heading; ?>
@@ -29,14 +37,21 @@ $watch_link = get_field('watch-link');
                             
                             <div class="carousel-btn">
                                 <a class="btn btn-custom donate-home" href="/donate"> <?php echo $donate_text ?></a>
-                                <a class="btn btn-custom btn-play" href="https://www.youtube.com/shorts/VQHQfPRULIo"  target="_blank"> <?php echo $watch_text ?></a>
+                                <a class="btn btn-custom btn-play" href="<?php echo get_field('youtube') ?>"  target="_blank"> <?php echo $watch_text ?></a>
 
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="carousel-img">
-                            <img src="<?php echo get_theme_file_uri('img/carousel-2.jpg')?>" alt="Image">
+                        <?php
+                                $c2_image_id = get_post_meta(get_the_ID(), 'carousel_2', true);
+                                $c2_image_url = wp_get_attachment_image_url($c2_image_id, 'full'); // 'full' size can be changed to match your image size requirements
+                                if ($c2_image_url) {
+                                    echo '<img src="' . esc_url($c2_image_url) . '" alt="img">';
+                                }
+                                ?>
+                          
                         </div>
                         <div class="carousel-text">
                             <h1><?php echo $big_heading; ?>
@@ -48,14 +63,20 @@ $watch_link = get_field('watch-link');
                             
                             <div class="carousel-btn">
                                 <a class="btn btn-custom donate-home" href="/donate"> <?php echo $donate_text ?></a>
-                                <a class="btn btn-custom btn-play" href="https://www.youtube.com/shorts/VQHQfPRULIo"  target="_blank"> <?php echo $watch_text ?></a>
+                                <a class="btn btn-custom btn-play" href="<?php echo get_field('youtube') ?>"  target="_blank"> <?php echo $watch_text ?></a>
 
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="carousel-img">
-                            <img src="<?php echo get_theme_file_uri('img/carousel-3.png')?>" alt="Image">
+                        <?php
+                                $c3_image_id = get_post_meta(get_the_ID(), 'carousel_3', true);
+                                $c3_image_url = wp_get_attachment_image_url($c3_image_id, 'full'); // 'full' size can be changed to match your image size requirements
+                                if ($c3_image_url) {
+                                    echo '<img src="' . esc_url($c3_image_url) . '" alt="img">';
+                                }
+                                ?>
                         </div>
                         <div class="carousel-text">
                             <h1><?php echo $big_heading; ?>
@@ -67,7 +88,7 @@ $watch_link = get_field('watch-link');
                             
                             <div class="carousel-btn">
                                 <a class="btn btn-custom donate-home" href="/donate"> <?php echo $donate_text ?></a>
-                                <a class="btn btn-custom btn-play" href="https://www.youtube.com/shorts/VQHQfPRULIo"  target="_blank"> <?php echo $watch_text ?></a>
+                                <a class="btn btn-custom btn-play" href="<?php echo get_field('youtube') ?>"  target="_blank"> <?php echo $watch_text ?></a>
 
                             </div>
                         </div>
@@ -75,7 +96,13 @@ $watch_link = get_field('watch-link');
                     
                     <div class="carousel-item">
                         <div class="carousel-img">
-                            <img src="<?php echo get_theme_file_uri('img/carousel-4.jpg')?>" alt="Image">
+                        <?php
+                                $c4_image_id = get_post_meta(get_the_ID(), 'carousel_4', true);
+                                $c4_image_url = wp_get_attachment_image_url($c4_image_id, 'full'); // 'full' size can be changed to match your image size requirements
+                                if ($c4_image_url) {
+                                    echo '<img src="' . esc_url($c4_image_url) . '" alt="img">';
+                                }
+                                ?>
                         </div>
                         <div class="carousel-text">
                             <h1><?php echo $big_heading; ?>
@@ -87,7 +114,7 @@ $watch_link = get_field('watch-link');
                             
                             <div class="carousel-btn">
                                 <a class="btn btn-custom donate-home" href="/donate"> <?php echo $donate_text ?></a>
-                                <a class="btn btn-custom btn-play" href="https://www.youtube.com/shorts/VQHQfPRULIo"  target="_blank"> <?php echo $watch_text ?></a>
+                                <a class="btn btn-custom btn-play" href="<?php echo get_field('youtube') ?>"  target="_blank"> <?php echo $watch_text ?></a>
 
                             </div>
                         </div>
@@ -101,18 +128,16 @@ $watch_link = get_field('watch-link');
 
 <section id="">
     <div class="container">
-        <div class="row">
+    <div class="section-header about-head text-center">
+                                <h2>About Us</h2>
+                                
+                            </div>
+        <div class="row about">
+            
             <div class="col-md-12">
                 <div class="mu-about-area">
                     <!-- Title -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="section-header text-center">
-                                <h2>About Us</h2>
-                                <p><?php echo get_post_meta(get_the_ID(), 'about_title', true); ?></p>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <!-- Start Feature Content -->
                     <div class="row">
                         <div class="col-md-6">
@@ -128,24 +153,53 @@ $watch_link = get_field('watch-link');
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="mu-about-right">
-                            <h3>About Us</h3>
-                                <p><?php echo get_post_meta(get_the_ID(), 'about_text', true); ?></p>
-                                <div class="carousel-btn">
-                                    <a class="btn btn-static" href="/about">Learn more</a>
+                        <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-header text-center">
+                                
+                                <p><?php echo get_post_meta(get_the_ID(), 'about_title', true); ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-tab">
+                            <ul class="nav nav-pills nav-justified">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="pill" href="#tab-content-1">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#tab-content-2">Mission</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#tab-content-3">Vision</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div id="tab-content-1" class="container tab-pane active">
+                                    <?php echo get_post_meta(get_the_ID(), 'about_text', true); ?>
+                                    <div class="carousel-btn">
+                                    <a class="btn btn-static" href="/donate">Learn More</a>
+                                    </div>
                                 </div>
-                                <h3>Our Mission</h3>
-                                <p><?php echo get_post_meta(get_the_ID(), 'mission_text', true); ?></p>
-                                <div class="carousel-btn">
-                                    <a class="btn btn-static" href="/what-we-do">Learn more</a>
+                                <div id="tab-content-2" class="container tab-pane fade">
+                                    <?php echo get_post_meta(get_the_ID(), 'mission_text', true); ?>
+                                    <div class="carousel-btn">
+                                    <a class="btn btn-static" href="/donate">Learn More</a>
+                                    </div>
                                 </div>
-                                <h3>Our Vision</h3>
-                                <p><?php echo get_post_meta(get_the_ID(), 'vision_text', true); ?></p>
-                                <div class="carousel-btn">
-                                    <a class="btn btn-static" href="/programs">Learn more</a>
+                                <div id="tab-content-3" class="container tab-pane fade">
+                                    <?php echo get_post_meta(get_the_ID(), 'vision_text', true); ?>
+                                    <div class="carousel-btn">
+                                    <a class="btn btn-static" href="/donate">Learn More</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        </div>
+                        </div>
+                    </div>
+
                     </div>
                     <!-- End Feature Content -->
                 </div>
@@ -163,8 +217,8 @@ $watch_link = get_field('watch-link');
 <div class="service">
     <div class="container">
         <div class="section-header text-center">
-            <p>What We Do?</p>
-            <h3>We give dignity and a future to orphans and the vulnerable in Taita Taveta.</h3>
+            <h2>What We Do?</h2>
+            <p>We give dignity and a future to orphans and the vulnerable in Taita Taveta.</p>
         </div>
         <div class="row">
             <?php if (have_rows('icon')) : ?>
@@ -175,7 +229,7 @@ $watch_link = get_field('watch-link');
                                 <i class="<?php echo esc_attr(get_sub_field('icon')); ?>"></i>
                             </div>
                             <div class="service-text">
-                                <h3><?php echo esc_html(get_sub_field('title')); ?></h3>
+                            <a href="<?php echo get_field('program_select') ?>">  <h3><?php echo esc_html(get_sub_field('title')); ?></h3></a>
                                 <ul>
                                     <?php
                                     $description_lines = explode("\n", esc_html(get_sub_field('description')));
@@ -202,61 +256,12 @@ $watch_link = get_field('watch-link');
     
 
         
-             <!-- Donate Start -->
-             <!-- <div class="donate" data-parallax="scroll" data-image-src="<?php echo get_theme_file_uri('img/donate.jpg') ?>">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-7">
-                            <div class="donate-content">
-                                <div class="section-header">
-                                    <p>Donate Now</p>
-                                    <h2>Give now, change lives.</h2>
-                                </div>
-                                <div class="donate-text">
-                                    <p>
-                                        Empower Mvono's initiatives with your donation. Together, we create meaningful impacts, offering support and opportunities to individuals and communities in need.
-                                      
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="donate-form bank-donate" >
-                               
-                                <button class="donate-btn donate-btn-custom bank-title"  >Bank Transfer Details</button>
-                                <p class="bank-text">1.KCB BANK(K) Limited Voi Branch</p>
-                                <p class="bank-text">2.Acc No: 1283680904</p>
-                                <p class="bank-text">3.Swift Code: KCBLKENX</p>
-                                <p class="bank-text">4.Bank Code: 01</p>
-                                <p class="bank-text">5.Branch Code: 186</p>
-                                <div>
-                                    <button  class="donate-btn donate-btn-custom">Thank you for your donation</button>
-                                </div>
-                                
-                            </div>
-                            <br>
-                            <br>
-                            <div class="donate-form">
-                                <button class="donate-btn donate-btn-custom bank-title"  >M-Pesa Transfer</button>
-                                <p class="bank-text">Paybill Number - //////</p>
-                                <p class="bank-text">Acc No:// 1283680904</p>
-                                <div>
-                                    <button  class="donate-btn donate-btn-custom">Thank you for your donation</button>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- Donate End -->
-            
-        
         <!-- Event Start -->
         <div class="event">
             <div class="container">
                 <div class="section-header text-center">
-                    <p>Upcoming Events</p>
-                    <h2>Be ready for our upcoming charity events</h2>
+                    <h2>Upcoming Events</h2>
+                    <p>Be ready for our upcoming charity events</p>
                 </div>
                 <div class="row">
 
@@ -284,53 +289,110 @@ $watch_link = get_field('watch-link');
             </div>
         </div>
         <!-- Event End -->
+                
+            <!-- Causes Start -->
+    <div class="causes">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2><?php echo esc_html(get_field('c_heading')); ?></h2>
+                <p><?php echo esc_html(get_field('c_paragraph')); ?></p>
+            </div>
 
+            <?php
+            $causes_repeater = get_field('causes', get_the_ID());
+            ?>
 
-        
-        <!-- Volunteer Start -->
-        <div class="volunteer" data-parallax="scroll" data-image-src="<?php echo get_theme_file_uri('img/volunteer.jpg') ?>">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-5">
-                        <div class="volunteer-form">
-                            <form>
-                                <div class="control-group">
-                                    <input type="text" class="form-control" placeholder="Name" required="required" />
-                                </div>
-                                <div class="control-group">
-                                    <input type="email" class="form-control" placeholder="Email" required="required" />
-                                </div>
-                                <div class="control-group">
-                                    <textarea class="form-control" placeholder="Why you want to become a volunteer?" required="required"></textarea>
-                                </div>
-                                <div>
-                                    <button class="btn btn-custom" type="submit">Become a volunteer</button>
-                                </div>
-                            </form>
+            <div class="owl-carousel causes-carousel">
+                <?php foreach ($causes_repeater as $cause) : ?>
+                    <div class="causes-item">
+                        <div class="causes-img">
+                            <?php
+                            $c_image_url = $cause['c_image']['url'];
+                            if ($c_image_url) {
+                                echo '<img class="" src="' . esc_url($c_image_url) . '" alt="img">';
+                            }
+                            ?>
+                        </div>
+                        <div class="causes-progress">
+                            <!-- Add your progress bar code here -->
+                        </div>
+                        <div class="causes-text">
+                            <h3><?php echo esc_html($cause['c_sub_heading']); ?></h3>
+                            <p><?php echo esc_html($cause['c_sub_paragraph']); ?></p>
+                        </div>
+                        <div class="causes-btn">
+                            <a class="btn btn-custom" href="<?php echo esc_url($cause['choose_program']); ?>">Learn More</a>
+                            <a class="btn btn-custom" href="/donate">Donate Now</a>
                         </div>
                     </div>
-                    <div class="col-lg-7">
-                        <div class="volunteer-content">
-                            <div class="section-header">
-                                <p>Become A Volunteer</p>
-                                <h2>Let’s make a difference in the lives of others</h2>
-                            </div>
-                            <div class="volunteer-text">
-                                <p>
-                                    Join our mission as a volunteer and be the change you wish to see in the world. Your time and dedication can make a profound impact on the lives of those in need. Get involved today!
-                            
-                                </p>
-                            </div>
-                        </div>
+                <?php endforeach; ?>
+            </div>
+
+        </div>
+    </div>
+    <!-- Causes End -->
+
+
+
+        <br>
+        <br>
+        <div class="section-header text-center">
+                    <h2>Donate</h2>
+                    <p></p>
+                </div>
+        <section class="donate_section">
+       
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 for-padding">
+                      <p>You donations will help us build an orphanage, feed & educate the children</p>
+                        <h2><a href="#">DONATE NOW</a></h2>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Volunteer End -->
+        </section>
 
+
+        
+   <!-- Contact Section Start -->
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="section-header text-center">
+            <h2>Contact Us</h2>
+            <p>Leave us a message via email</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow slideInUp mx-auto" data-wow-delay="0.3s">
+                <form>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control border-0 bg-light px-4" placeholder="Your Name" style="height: 55px;">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" class="form-control border-0 bg-light px-4" placeholder="Your Email" style="height: 55px;">
+                        </div>
+                        <div class="col-12">
+                            <input type="text" class="form-control border-0 bg-light px-4" placeholder="Subject" style="height: 55px;">
+                        </div>
+                        <div class="col-12">
+                            <textarea class="form-control border-0 bg-light px-4 py-3" rows="4" placeholder="Message"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-custom w-100 py-3" type="submit">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact Section End -->
 
             
-                
+<!--                 
         <section class="section-contact ">
                     <div class="container-form">
                         <div class="contactInfo"> 
@@ -345,9 +407,9 @@ $watch_link = get_field('watch-link');
                                         </span>
                                     </li>
                                     <li>
-                                        <span><img src="<?php echo get_theme_file_uri('/images/mail.png') ?>"></span>
+                                        <span><img src="<?php echo get_theme_file_uri('/images/mail.png') ?>"></span> -->
                                         <!-- <span>nassosanagn@gmail.com</span> -->
-                                        <span><a href = "mailto: info@mvonocommunitycentre.org">info@mvonocommunity <br> centre.org</a></span>
+                                        <!-- <span><a href = "mailto: info@mvonocommunitycentre.org">info@mvonocommunity <br> centre.org</a></span>
                                     </li>
                                     <li>
                                     
@@ -398,7 +460,7 @@ $watch_link = get_field('watch-link');
                             
                             
                      
-                </section>
+                </section> -->
   
 
    
