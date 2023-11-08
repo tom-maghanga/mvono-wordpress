@@ -47,7 +47,7 @@
                         
             $(document).ready(function(){
                 $('#about-us').on('mousedown', function(event){
-                    window.location.href= 'about';
+                    window.location.href= 'who-we-are';
                 });
             });
             $(document).ready(function(){

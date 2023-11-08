@@ -56,7 +56,7 @@
             <div class="navbar-nav ml-auto">
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="nav-item nav-link">Home</a>
                 <div class="nav-item dropdown">
-                <a href="<?php echo esc_url(home_url('/about')); ?>" class="nav-link dropdown-toggle" data-toggle="dropdown" id="about-us">About us</a>
+                <a href="<?php echo esc_url(home_url('/who-we-are')); ?>" class="nav-link dropdown-toggle" data-toggle="dropdown" id="about-us">About us</a>
 
                     <div class="dropdown-menu">
                         <a href="<?php echo esc_url(home_url('/who-we-are')); ?>" class="dropdown-item child">Who We Are</a>

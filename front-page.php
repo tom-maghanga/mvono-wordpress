@@ -178,19 +178,19 @@ $watch_link = get_field('watch-link');
                                 <div id="tab-content-1" class="container tab-pane active">
                                     <?php echo get_post_meta(get_the_ID(), 'about_text', true); ?>
                                     <div class="carousel-btn">
-                                    <a class="btn btn-static" href="/donate">Learn More</a>
+                                    <a class="btn btn-static" href="/about">Learn More</a>
                                     </div>
                                 </div>
                                 <div id="tab-content-2" class="container tab-pane fade">
                                     <?php echo get_post_meta(get_the_ID(), 'mission_text', true); ?>
                                     <div class="carousel-btn">
-                                    <a class="btn btn-static" href="/donate">Learn More</a>
+                                    <a class="btn btn-static" href="/what-we-do">Learn More</a>
                                     </div>
                                 </div>
                                 <div id="tab-content-3" class="container tab-pane fade">
                                     <?php echo get_post_meta(get_the_ID(), 'vision_text', true); ?>
                                     <div class="carousel-btn">
-                                    <a class="btn btn-static" href="/donate">Learn More</a>
+                                    <a class="btn btn-static" href="/programs">Learn More</a>
                                     </div>
                                 </div>
                             </div>
@@ -229,7 +229,7 @@ $watch_link = get_field('watch-link');
                                 <i class="<?php echo esc_attr(get_sub_field('icon')); ?>"></i>
                             </div>
                             <div class="service-text">
-                            <a href="<?php echo get_field('program_select') ?>">  <h3><?php echo esc_html(get_sub_field('title')); ?></h3></a>
+                                <h3><a href="<?php echo "/". get_sub_field('program_select') ?>"> <?php echo esc_html(get_sub_field('title')); ?>  </a> </h3>
                                 <ul>
                                     <?php
                                     $description_lines = explode("\n", esc_html(get_sub_field('description')));
@@ -240,7 +240,7 @@ $watch_link = get_field('watch-link');
                                 </ul>
                                 <div class="carousel-btn">
                                     <a class="btn btn-static" href="/donate">Donate Now</a>
-                                    <a class="btn m" href="">Learn More</a>
+                                    <a class="btn m" href="<?php echo "/". get_sub_field('program_select') ?>">Learn More</a>
                                 </div>
                             </div>
                         </div>
@@ -256,6 +256,8 @@ $watch_link = get_field('watch-link');
     
 
         
+
+        
         <!-- Event Start -->
         <div class="event">
             <div class="container">
@@ -268,8 +270,7 @@ $watch_link = get_field('watch-link');
                         <div class="event-item">
                         
                             
-                            <img src="<?php 
-                            $event_image= get_field('event_image')                            
+                            <img src="<?php $event_image= get_field('event_image');                            
                             echo esc_url($event_image['url']); ?>" alt="Image">
                             <div class="event-content">
                                 <div class="event-meta">
@@ -294,55 +295,56 @@ $watch_link = get_field('watch-link');
         </div>
         <!-- Event End -->
                 
-            <!-- Causes Start -->
-    <div class="causes">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2><?php echo esc_html(get_field('c_heading')); ?></h2>
-                <p><?php echo esc_html(get_field('c_paragraph')); ?></p>
-            </div>
-
-            <?php
-            $causes_repeater = get_field('causes', get_the_ID());
-            ?>
-
-            <div class="owl-carousel causes-carousel">
-                <?php foreach ($causes_repeater as $cause) : ?>
-                    <div class="causes-item">
-                        <div class="causes-img">
-                            <?php
-                            $c_image_url = $cause['c_image']['url'];
-                            if ($c_image_url) {
-                                echo '<img class="" src="' . esc_url($c_image_url) . '" alt="img">';
-                            }
-                            ?>
-                        </div>
-                        <div class="causes-progress">
-                            <!-- Add your progress bar code here -->
-                        </div>
-                        <div class="causes-text">
-                            <h3><?php echo esc_html($cause['c_sub_heading']); ?></h3>
-                            <p><?php echo esc_html($cause['c_sub_paragraph']); ?></p>
-                        </div>
-                        <div class="causes-btn">
-                            <a class="btn btn-custom" href="<?php echo "/".esc_url($cause['choose_program']); ?>">Learn More</a>
-                            <a class="btn btn-custom" href="/donate">Donate Now</a>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-
+<!-- Causes Start -->
+<div class="causes">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2><?php echo esc_html(get_field('c_heading')); ?></h2>
+            <p><?php echo esc_html(get_field('c_paragraph')); ?></p>
         </div>
-    </div>
-    <!-- Causes End -->
 
-    
+        <?php
+        $causes_repeater = get_field('causes', get_the_ID());
+        ?>
+
+        <div class="owl-carousel causes-carousel">
+            <?php foreach ($causes_repeater as $cause) : ?>
+                <div class="causes-item">
+                    <div class="causes-img">
+                        <?php
+                        $c_image_url = $cause['c_image']['url'];
+                        if ($c_image_url) {
+                            echo '<img class="" src="' . esc_url($c_image_url) . '" alt="img">';
+                        }
+                        ?>
+                    </div>
+                    <div class="causes-progress">
+                        <!-- Add your progress bar code here -->
+                    </div>
+                    <div class="causes-text">
+                        <h3><?php echo esc_html($cause['c_sub_heading']); ?></h3>
+                        <p><?php echo esc_html($cause['c_sub_paragraph']); ?></p>
+                    </div>
+                    <div class="causes-btn">
+                        <a class="btn btn-custom" href="<?php echo "/". esc_url($cause['choose_program']); ?>">Learn More</a>
+                        <a class="btn btn-custom" href="/donate">Donate Now</a>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+
+    </div>
+</div>
+<!-- Causes End -->
+
+
+
 
         <br>
         <br>
         <div class="section-header text-center">
     <h2>Donate</h2>
-        <p><?php echo get_field('donate_text') ?></p>
+        <p> <p><?php echo get_field('donate_text') ?></p></p>
     </div>
     <?php
         $background_image = get_field('background_image'); // Retrieve background image URL from ACF field
@@ -357,6 +359,9 @@ $watch_link = get_field('watch-link');
             </div>
         </div>
     </section>
+
+
+
 
 
         
