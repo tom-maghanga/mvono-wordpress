@@ -321,7 +321,7 @@ $watch_link = get_field('watch-link');
                             <p><?php echo esc_html($cause['c_sub_paragraph']); ?></p>
                         </div>
                         <div class="causes-btn">
-                            <a class="btn btn-custom" href="<?php echo esc_url($cause['choose_program']); ?>">Learn More</a>
+                            <a class="btn btn-custom" href="<?php echo "/".esc_url($cause['choose_program']); ?>">Learn More</a>
                             <a class="btn btn-custom" href="/donate">Donate Now</a>
                         </div>
                     </div>
@@ -337,20 +337,19 @@ $watch_link = get_field('watch-link');
         <br>
         <br>
         <div class="section-header text-center">
-                    <h2>Donate</h2>
-                    <p></p>
-                </div>
-        <section class="donate_section">
-       
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 for-padding">
-                      <p>You donations will help us build an orphanage, feed & educate the children</p>
-                        <h2><a href="#">DONATE NOW</a></h2>
-                    </div>
+    <h2>Donate</h2>
+        <p></p>
+    </div>
+    <section class="donate_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 for-padding">
+                    <p>Your donations will help us build an orphanage, feed & educate the children</p>
+                    <h2><a href="/donate">DONATE NOW</a></h2>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
         
