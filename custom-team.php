@@ -25,7 +25,7 @@ get_header();
                 <a class=" nav-i " href="<?php echo esc_url(home_url('/who-we-are')); ?>">Who we are</a>
             </li>
             <li class="nav-item">
-            <a class=" nav-i active-i" href="<?php echo esc_url(home_url('/team')); ?>">Our Team</a>
+            <a class=" nav-i active-i" href="<?php echo esc_url(home_url('/our-team')); ?>">Our Team</a>
             </li>
             <li class="nav-item"><a class=" nav-i " href="<?php echo esc_url(home_url('/story')); ?>">Our Story</a>
             
@@ -37,132 +37,66 @@ get_header();
 
 
 
-    <!-- Single Post Start-->
-<div class="single">
-<div class="container">
-<div class="row">
-    <div class="col-lg-8">
-        <div class="single-content">
-        <?php 
-        $image1 = get_field('program_image_1');
-            if( !empty( $image1 ) ): ?>
-                <img src="<?php echo esc_url($image1['url']); ?>" alt="<?php echo esc_attr($image1['alt']); ?>" />
-                
-        <?php endif; ?>
-        <?php 
-        $image2 = get_field('program_image_2');
-            if( !empty( $image2 ) ): ?>
-                <img src="<?php echo esc_url($image2['url']); ?>" alt="<?php echo esc_attr($image2['alt']); ?>" />
-                
-        <?php endif; ?>
-        <?php 
-        $image3 = get_field('program_image_1');
-            if( !empty( $image3 ) ): ?>
-                <img src="<?php echo esc_url($image3['url']); ?>" alt="<?php echo esc_attr($image3['alt']); ?>" />
-                
-        <?php endif; ?>
-        
-           
+<!-- Team Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="section-title bg-white text-center text-primary px-3"><?php echo get_field('team_title') ?></h2>
+            <h1 class="mb-5"><?php echo get_field('team_subtitle') ?></h1>
         </div>
-        
-        <div class="single-bio">
-            <div class="single-bio-img">
-                
-            </div>
-           
-        </div>
-        <div class="single-related">
-            
-            <div class="owl-carousel ">
-                <div class="post-item">
-                    
-                    
-                </div>
-                <div class="post-item">
-                    <div class="post-img">
-                       
-                    </div>
-                    <div class="post-text">
-                                                      
-                    </div>
-                </div>
-                <div class="post-item">
-                    <div class="post-img">
-                       
-                    </div>
-                    <div class="post-text">
-                      
-                        <div class="post-meta">
-                          
-                        </div>
-                    </div>
-                </div>
-                <div class="post-item">
-                    <div class="post-img">
-                      
-                    </div>
-                    <div class="post-text">
-                     
-                        <div class="post-meta">
-                           
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="row g-4">
 
-    </div>
+        <ul>
+                        <?php
+                            $values_list = get_field('team_text');
+                            if ($values_list) {
+                                $values_array = explode("\n", $values_list);
+                                foreach ($values_array as $value) {
+                                    echo '<li><h4 class="heading">' . esc_html($value) . '</h4></li>';
+                                }
+                            }
+                            ?>
 
-    <div class="col-lg-4">
-        <div class="sidebar">
+                        </ul>
 
-                    <?php
-
-            // Check rows exists.
-            if( have_rows('program_details') ):
-
-                // Loop through rows.
-                while( have_rows('program_details') ) : the_row();
-
-                  
-                    ?>
-
-                  
-           
-
-            <div class="sidebar-widget">
-                <h2 class="widget-title"><?php echo get_sub_field('program_head') ?></h2>
-                <div class="recent-post">
-                    <h2> <ul class="nav nav-pills nav-justified">
-                        <li class="nav-item">
-                            <a class="nav-link active" data-toggle="pill" href="programs-impact.html"><?php echo get_sub_field('program_text') ?></a>
-                        </li>
-                        
-                    </ul></h2>
-            <p>
-            <?php echo get_sub_field('program_sub_title') ?>
-            </p>
             <?php
-                // End loop.
-                endwhile;
+            // Get the repeater field values
+            $team = get_field('team'); // Replace '' with your ACF repeater field name
 
-            // No value.
-            else :
-                // Do something...
-            endif;
-
+            if ($team) {
+                foreach ($team as $tm) {
             ?>
-           
-         
 
-           
-            </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="<?php echo esc_attr($tm['delay']) . 's'; ?>">
+                        <div class="team-item bg-light">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="<?php echo esc_url($tm['tm_image']['url']); ?>" alt="">
+                            </div>
+                            <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                    <a class="btn btn-static btn-sm-square  mx-1" href="<?php echo esc_url($tm['facebook']); ?>"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-static btn-sm-square  mx-1" href="<?php echo esc_url($tm['twitter']); ?>"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-static btn-sm-square  mx-1" href="<?php echo esc_url($tm['instagram']); ?>"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb-0"><?php echo esc_html($tm['name']); ?></h5>
+                                <small><?php echo esc_html($tm['designation']); ?></small>
+                            </div>
+                        </div>
+                    </div>
+
+            <?php
+                }
+            } else {
+                echo 'We are updating this soon, Hang on.';
+            }
+            ?>
+
         </div>
     </div>
 </div>
-</div>
-</div>
-<!-- Single Post End-->   
+<!-- Team End -->
 
    
 

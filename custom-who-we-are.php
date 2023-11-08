@@ -25,7 +25,7 @@ get_header();
                 <a class=" nav-i active-i" href="<?php echo esc_url(home_url('/who-we-are')); ?>">Who we are</a>
             </li>
             <li class="nav-item">
-            <a class=" nav-i " href="<?php echo esc_url(home_url('/team')); ?>">Our Team</a>
+            <a class=" nav-i " href="<?php echo esc_url(home_url('/our-team')); ?>">Our Team</a>
             </li>
             <li class="nav-item"><a class=" nav-i " href="<?php echo esc_url(home_url('/story')); ?>">Our Story</a>
             
