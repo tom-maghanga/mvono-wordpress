@@ -260,13 +260,17 @@ $watch_link = get_field('watch-link');
         <div class="event">
             <div class="container">
                 <div class="section-header text-center">
-                    <h2>Upcoming Events</h2>
-                    <p>Be ready for our upcoming charity events</p>
+                    <h2><?php echo get_field('section_title') ?></h2>
+                    <p><?php echo get_field('section_text') ?></p>
                 </div>
                 <div class="row">
 
                         <div class="event-item">
-                            <img src="<?php echo get_theme_file_uri('img/event-1.jpg') ?>" alt="Image">
+                        
+                            
+                            <img src="<?php 
+                            $event_image= get_field('event_image')                            
+                            echo esc_url($event_image['url']); ?>" alt="Image">
                             <div class="event-content">
                                 <div class="event-meta">
                                     <p><i class="fa fa-calendar-alt"></i><?php echo get_field('date')?></p>
@@ -277,7 +281,7 @@ $watch_link = get_field('watch-link');
                                     <h3><?php echo get_field('event_title')?></h3>
                                     <p><?php echo get_field('event_explain')?></p>
                                     
-                                    <a class="btn btn-custom" href="">Join Now</a>
+                                    <a class="btn btn-custom" href="/news"><?php echo get_field('event_button') ?></a>
                                 </div>
                             
                         </div>
@@ -332,13 +336,13 @@ $watch_link = get_field('watch-link');
     </div>
     <!-- Causes End -->
 
-
+    
 
         <br>
         <br>
         <div class="section-header text-center">
     <h2>Donate</h2>
-        <p></p>
+        <p><?php echo get_field('donate_text') ?></p>
     </div>
     <?php
         $background_image = get_field('background_image'); // Retrieve background image URL from ACF field
