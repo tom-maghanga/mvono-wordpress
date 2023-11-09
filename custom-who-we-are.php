@@ -27,7 +27,7 @@ get_header();
             <li class="nav-item">
             <a class=" nav-i " href="<?php echo esc_url(home_url('/our-team')); ?>">Our Team</a>
             </li>
-            <li class="nav-item"><a class=" nav-i " href="<?php echo esc_url(home_url('/story')); ?>">Our Story</a>
+            <li class="nav-item"><a class=" nav-i " href="<?php echo esc_url(home_url('/our-story')); ?>">Our Story</a>
             
            
             
@@ -35,11 +35,11 @@ get_header();
     </div>
 </div>
 
-<div class="section">
+<div class="section" style="margin-top : 60px">
     <div class="container">
         <div class="row text-left mb-5">
             <div class="col-12">
-                <h2 class="font-weight-bold heading text-primary mb-4"><?php echo get_field('who_head'); ?></h2>
+                <h2 class="font-weight-bold heading text-primary mb-4"><?php echo get_field('who_title'); ?></h2>
             </div>
             <div class="col-lg-6">
                 <p class="text-black-50">

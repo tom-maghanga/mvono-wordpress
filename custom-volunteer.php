@@ -34,51 +34,57 @@ get_header();
     </div>
 </div>
 
+<br>
+<br>
+<br>
 
-        
-        <!-- Volunteer Start -->
-        <div class="volunteer" data-parallax="scroll" data-image-src="<?php echo get_theme_file_uri('img/volunteer.jpg') ?>">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-5">
-                        <div class="volunteer-form">
-                            <form>
-                                <div class="control-group">
-                                    <input type="text" class="form-control" placeholder="Name" required="required" />
-                                </div>
-                                <div class="control-group">
-                                    <input type="email" class="form-control" placeholder="Email" required="required" />
-                                </div>
-                                <div class="control-group">
-                                    <textarea class="form-control" placeholder="Why you want to become a volunteer?" required="required"></textarea>
-                                </div>
-                                <div>
-                                    <button class="btn btn-custom" type="submit">Become a volunteer</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="volunteer-content">
-                            <div class="section-header">
-                                <p>Become A Volunteer</p>
-                                <h2>Let’s make a difference in the lives of others</h2>
-                            </div>
-                            <div class="volunteer-text">
-                                <p>
-                                    Join our mission as a volunteer and be the change you wish to see in the world. Your time and dedication can make a profound impact on the lives of those in need. Get involved today!
-                            
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Volunteer End -->
-        
 
-   
+<!-- ======= Pricing Section ======= -->
+<section id="pricing" class="pricing pt-0">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-header">
+    <h2>Volunteer</h2>
+    <p>Contact us to learn about volunteer opportunities </p>
+    </div>
+    <?php
+            // Get volunteer plans data from ACF
+        $volunteer_plans = get_field('volunteer_plans');
+
+        if ($volunteer_plans) {
+            echo '<div class="row gy-4">'; // Start row
+
+            foreach ($volunteer_plans as $plan) {
+                $plan_title = $plan['volunteer_plan_title'];
+                $plan_description = $plan['volunteer_plan_description'];
+                $plan_button_text = $plan['volunteer_plan_button_text'];
+
+                ?>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="<?php echo $plan_price ? '300' : '100'; ?>">
+                    <div class="pricing-item featured<?php echo $plan_price ? 'featured' : ''; ?>">
+                        <h3><?php echo $plan_title; ?></h3>
+                        <?php if ($plan_description) { ?>
+                            <p><?php echo $plan_description; ?></p>
+                        <?php } ?>
+                        <?php if ($plan_price) { ?>
+                            <span class="price"><?php echo $plan_price; ?></span>
+                        <?php } ?>
+                        <a href="/donate-now" class="btn btn-custom "><?php echo $plan_button_text; ?></a>
+                    </div>
+                </div><?php
+            }
+
+            echo '</div>'; // End row
+}
+?>
+
+
+  </div>
+</section><!-- End Pricing Section -->  
+
+
+
+
 
 
 <?php

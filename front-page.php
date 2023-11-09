@@ -1,3 +1,4 @@
+
 <?php get_header(); ?>
 
 
@@ -367,116 +368,121 @@ $watch_link = get_field('watch-link');
 
 
 
+      <!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+  <div class="container" data-aos="fade-up">
 
-        
-   <!-- Contact Section Start -->
-<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container py-5">
-        <div class="section-header text-center">
-            <h2>Contact Us</h2>
-            <p>Leave us a message via email</p>
-        </div>
-    </div>
+  <div class="section-header text-center">
+  <h2><?php echo get_field('contact_title') ?></h2>
+    <p><?php echo get_field('contact_sub_title') ?></p>
+  </div>
 
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-lg-6 wow slideInUp mx-auto" data-wow-delay="0.3s">
-                <form>
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <input type="text" class="form-control border-0 bg-light px-4" placeholder="Your Name" style="height: 55px;">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="email" class="form-control border-0 bg-light px-4" placeholder="Your Email" style="height: 55px;">
-                        </div>
-                        <div class="col-12">
-                            <input type="text" class="form-control border-0 bg-light px-4" placeholder="Subject" style="height: 55px;">
-                        </div>
-                        <div class="col-12">
-                            <textarea class="form-control border-0 bg-light px-4 py-3" rows="4" placeholder="Message"></textarea>
-                        </div>
-                        <div class="col-12">
-                            <button class="btn btn-custom w-100 py-3" type="submit">Send Message</button>
-                        </div>
-                    </div>
-                </form>
+    <div class="row gy-4 mt-4">
+
+      <div class="col-lg-4">
+
+        <div class="">
+          <i class="bi bi-geo-alt "> </i>
+          <div>
+            <h4>Visit Us:</h4>
+            <p><?php echo get_field('contact_location') ?></p>
+          </div>
+        </div><!-- End Info Item -->
+
+        <div class="">
+          <i class="bi bi-phone flex-shrink-0"></i>
+          <div>
+            <h4>Call Us:</h4>
+            <p><?php echo get_field('contact_number') ?></p>
+          </div>
+        </div><!-- End Info Item -->
+
+        <div class="">
+          <i class="bi bi-facebook flex-shrink-0"></i>
+          <div>
+            <h4>Follow Us:</h4>
+            <p><?php echo get_field('contact_media') ?></p>
+          </div>
+        </div><!-- End Info Item -->
+
+        <div class=" ">
+          <i class="bi bi-calendar-event flex-shrink-0"></i>
+          <div>
+            <h4>Join Our Next Event:</h4>
+            <p><?php echo get_field('contact_venue') ?></p>
+          </div>
+        </div><!-- End Info Item -->
+
+      </div>
+
+      <div class="col-lg-8">
+      <form action="" method="post" role="form" class="php-email-form">
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
             </div>
-        </div>
-    </div>
-</div>
-<!-- Contact Section End -->
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <select class="form-control" name="subject" required>
+              <option value="" disabled selected>Select Subject</option>
+              <option value="general">General Enquiry</option>
+              <option value="donation">Donation</option>
+              <option value="volunteer">Volunteer</option>
+              <option value="team">Join the Team</option>
+            </select>
+          </div>
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+          </div>
+          <div class="my-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+          </div>
+          <div class="carousel-btn"><button type="submit" class="btn btn-static">Send Message</button></div>
 
-            
-<!--                 
-        <section class="section-contact ">
-                    <div class="container-form">
-                        <div class="contactInfo"> 
-                            <div>
-                                <h2>Contact Info</h2>
-                                <ul class="info">
-                                    <li>
-                                        <span><img src="<?php echo get_theme_file_uri('/images/location.png') ?>"></span>
-                                        <span> P.O Box 1119 Wundanyi,<br>
-                                          
-                                            Kenya</span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span><img src="<?php echo get_theme_file_uri('/images/mail.png') ?>"></span> -->
-                                        <!-- <span>nassosanagn@gmail.com</span> -->
-                                        <!-- <span><a href = "mailto: info@mvonocommunitycentre.org">info@mvonocommunity <br> centre.org</a></span>
-                                    </li>
-                                    <li>
-                                    
-                                        <span><img src="<?php echo get_theme_file_uri('/images/call.png'); ?>"></span>
-                                        <span>+254 722 648 422</span>
-                                    </li>
-                                      
-        
-                                </ul>
-                            </div>
-                            <ul class="sci">
-                                <li><a href="https://www.facebook.com/nassosanagn/"><img src="<?php echo get_theme_file_uri('/images/1.png') ?>"></a></li>
-                                <li><a href="https://www.instagram.com/nassosanagn_/?hl=el"><img src="<?php echo get_theme_file_uri('/images/3.png') ?>"></a></li>
-                                <li><a href="https://twitter.com/nassosanagn"><img src="<?php echo get_theme_file_uri('/images/2.png') ?>"></a></li>
-                                <li><a href="https://www.linkedin.com/in/nassos-anagnostopoulos-2b9631196/"><img src="<?php echo get_theme_file_uri('/images/5.png') ?>"></a></li>
-                                
-                            </ul>
-                        </div>
-                        <div class="contactForm">
-                                <h2>Send a Message</h2>
-                                <div class="formBox">
-                                <div class="inputBox w50">
-                                    <input type="text" name="" required>
-                                    <span>First Name</span>
-                                </div>
-                                <div class="inputBox w50">
-                                    <input type="text" required>
-                                    <span>Last Name</span>
-                                </div>
-                                <div class="inputBox w50">
-                                    <input type="email" required>
-                                    <span>Email Address</span>
-                                </div>
-                                <div class="inputBox w50">
-                                    <input type="text" required>
-                                    <span>Mobile Number</span>
-                                </div>
-                                <div class="inputBox w100">
-                                    <textarea required></textarea>
-                                    <span>Write your message here...</span>
-                                </div>
-                                <div class="inputBox w100">
-                                    <input type="submit" value="Send">
-                                </div>
-                            </div>
-                        </div>
-                            
-                            
-                            
-                     
-                </section> -->
-  
+        </form>
+      </div><!-- End Contact Form -->
+
+      <?php
+                if (isset($_POST['submit'])) {
+
+                // Get form data
+                $name = $_POST['name'];
+                $email = $_POST['email'];
+                $subject = $_POST['subject'];
+                $message = $_POST['message'];
+
+                // Validate form data
+                if (empty($name) || empty($email) || empty($subject) || empty($message)) {
+                    echo "Please fill out all required fields.";
+                    return;
+                }
+
+                // Prepare email content
+                $to = "recipient@example.com"; // Replace with your recipient email address
+                $from = $email;
+                $subject = "Contact Form Submission: " . $subject;
+                $message = "Name: " . $name . "\n\nEmail: " . $email . "\n\nSubject: " . $subject . "\n\nMessage: \n" . $message;
+
+                // Send email
+                if (mail($to, $subject, $message, "From: " . $from)) {
+                    echo "Your message has been sent. Thank you!";
+                } else {
+                    echo "There was an error sending your message. Please try again later.";
+                }
+                }
+                ?>
+
+    </div>
+
+  </div>
+</section><!-- End Contact Section -->
+
+
 
    
 

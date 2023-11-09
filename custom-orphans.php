@@ -42,139 +42,45 @@ Template Name: orphans
         </ul>
     </div>
 </div>
-<!-- Single Post Start-->
-<div class="single">
-<div class="container">
-<div class="row">
-    <div class="col-lg-8">
-        <div class="single-content">
-        <?php 
-        $image1 = get_field('program_image_1');
-            if( !empty( $image1 ) ): ?>
-                <img src="<?php echo esc_url($image1['url']); ?>" alt="<?php echo esc_attr($image1['alt']); ?>" />
-                
-        <?php endif; ?>
-        <?php 
-        $image2 = get_field('program_image_2');
-            if( !empty( $image2 ) ): ?>
-                <img src="<?php echo esc_url($image2['url']); ?>" alt="<?php echo esc_attr($image2['alt']); ?>" />
-                
-        <?php endif; ?>
-        <?php 
-        $image3 = get_field('program_image_1');
-            if( !empty( $image3 ) ): ?>
-                <img src="<?php echo esc_url($image3['url']); ?>" alt="<?php echo esc_attr($image3['alt']); ?>" />
-                
-        <?php endif; ?>
-        
-           
-        </div>
-        
-        <div class="single-bio">
-            <div class="single-bio-img">
-                
-            </div>
-           
-        </div>
-        <div class="single-related">
-            
-            <div class="owl-carousel ">
-                <div class="post-item">
-                    
-                    
-                </div>
-                <div class="post-item">
-                    <div class="post-img">
-                       
-                    </div>
-                    <div class="post-text">
-                                                      
-                    </div>
-                </div>
-                <div class="post-item">
-                    <div class="post-img">
-                       
-                    </div>
-                    <div class="post-text">
-                      
-                        <div class="post-meta">
-                          
-                        </div>
-                    </div>
-                </div>
-                <div class="post-item">
-                    <div class="post-img">
-                      
-                    </div>
-                    <div class="post-text">
-                     
-                        <div class="post-meta">
-                           
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section id="details-section" class="basic-3">
+    <div class="container">
+        <div class="section-header text-center">
+                    <h2><?php echo esc_html(get_sub_field('section_header')); ?></h2>
+                    <p><?php echo esc_html(get_sub_field('section_description')); ?></p>
         </div>
 
-    </div>
-
-    <div class="col-lg-4">
-        <div class="sidebar">
-
+        <?php if (have_rows('details_section')): ?>
+            <?php while (have_rows('details_section')): the_row(); ?>
+                
+                <div class="row">
                     <?php
-
-            // Check rows exists.
-            if( have_rows('program_details') ):
-
-                // Loop through rows.
-                while( have_rows('program_details') ) : the_row();
-
-                  
+                    $alignment_class = (get_sub_field('image_alignment') == 'right') ? 'order-lg-1' : 'order-lg-2';
                     ?>
+                    <div class="col-lg-6 col-xl-7">
+                        <div class="text-container">
+                            <h2><?php echo esc_html(get_sub_field('program_item')); ?></h2>
+                            <ul>
+                                <?php
+                                $program_text = explode("\n", esc_html(get_sub_field('program_text')));
 
-                  
-           
+                                foreach ($program_text as $_line) {
+                                    echo '<li class="bi bi-check">' . esc_html($_line) . '</li>';
+                                }
+                                ?>
+                            </ul>
+                        </div> <!-- end of text-container -->
+                    </div> <!-- end of col -->
+                    <div class="col-lg-6 col-xl-5 <?php echo $alignment_class; ?>">
+                        <div class="image-container">
+                            <img class="img-fluid" src="<?php echo esc_url(get_sub_field('image')['url']); ?>" alt="alternative">
+                        </div> <!-- end of image-container -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            <?php endwhile; ?>
+        <?php endif; ?>
+    </div> <!-- end of container -->
+</section> <!-- end of basic-3 -->
 
-            <div class="sidebar-widget">
-                <h2 class="widget-title"><?php echo get_sub_field('program_head') ?></h2>
-                <div class="recent-post">
-                    <h2> <ul class="nav nav-pills nav-justified">
-                        <li class="nav-item">
-                            <a class="nav-link active" data-toggle="pill" href="programs-impact.html"><?php echo get_sub_field('program_sub_title') ?></a>
-                        </li>
-                        
-                    </ul></h2>
-                    <p>
-            <?php
-                                    $description_lines = explode("\n", esc_html(get_sub_field('program_text')));
-                                    foreach ($description_lines as $line) {
-                                        echo '<li>' . esc_html($line) . '</li>';
-                                    }
-                                    ?>
-          
-            </p>
-
-            <?php
-                // End loop.
-                endwhile;
-
-            // No value.
-            else :
-                // Do something...
-            endif;
-
-            ?>
-           
-         
-
-           
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-<!-- Single Post End-->   
 
 <?php
 get_footer();

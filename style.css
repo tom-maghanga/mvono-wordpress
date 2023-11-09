@@ -2150,7 +2150,132 @@ a:focus {
 .single .comment-form textarea:focus {
     border-color: #28B2C7;
 }
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.contact .info-item+.info-item {
+    margin-top: 40px;
+  }
+  
+  .contact .info-item i {
+    font-size: 20px;
+    background: var(--color-primary);
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    margin-right: 15px;
+  }
+  
+  .contact .info-item h4 {
+    padding: 0;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--color-secondary);
+  }
+  
+  .contact .info-item p {
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: rgba(14, 29, 52, 0.8);
+  }
+  
+  .contact .php-email-form {
+    width: 100%;
+    background: #fff;
+  }
+  
+  .contact .php-email-form .form-group {
+    padding-bottom: 8px;
+  }
+  
+  .contact .php-email-form .error-message {
+    display: none;
+    color: #fff;
+    background: #df1529;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+  }
+  
+  .contact .php-email-form .error-message br+br {
+    margin-top: 25px;
+  }
+  
+  .contact .php-email-form .sent-message {
+    display: none;
+    color: #fff;
+    background: #059652;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+  }
+  
+  .contact .php-email-form .loading {
+    display: none;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .contact .php-email-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #059652;
+    border-top-color: #fff;
+    animation: animate-loading 1s linear infinite;
+  }
+  
+  .contact .php-email-form input,
+  .contact .php-email-form textarea {
+    border-radius: 4px;
+    box-shadow: none;
+    font-size: 14px;
+  }
+  
+  .contact .php-email-form input {
+    height: 44px;
+  }
+  
+  .contact .php-email-form textarea {
+    padding: 10px 12px;
+  }
+  
+  .contact .php-email-form button[type=submit] {
+    background: var(--color-primary);
+    border: 0;
+    padding: 10px 35px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 5px;
+  }
+  
+  .contact .php-email-form button[type=submit]:hover {
+    background: rgba(13, 66, 255, 0.8);
+  }
+  
+  
+  @keyframes animate-loading {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
+  
 
 /**********************************/
 /*********** Sidebar CSS **********/
@@ -2450,7 +2575,7 @@ a:focus {
 .features .features-item h3 {
     font-weight: 600;
     font-size: 26px;
-    color: #001973;
+    color: #28B2C7;
   }
   
   .features .features-item ul {
@@ -2476,6 +2601,254 @@ a:focus {
     margin-bottom: 0;
   }
 
+  /*** Services Start ***/
+
+.services .services-item {
+    box-shadow: 0 0 60px rgba(0, 0, 0, .2);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 10px 0;
+    position: relative;
+}
+
+
+.services-content::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-radius: 10px 10px 0 0;
+    background: rgba(3, 43, 243, 0.8);
+    transition: .5s;
+}
+
+.services-content::after {
+    top: 0;
+    bottom: auto;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.services-item:hover .services-content::after {
+    height: 100%;
+    opacity: 1;
+    transition: .5s;
+}
+
+.services-item:hover .services-content-icon {
+    position: relative;
+    z-index: 2;
+}
+
+.services-item .services-content-icon i,
+.services-item .services-content-icon p {
+    transition: .5s;
+}
+
+.services-item:hover .services-content-icon i {
+    color: var(--bs-secondary) !important;
+}
+
+.services-item:hover .services-content-icon p {
+    color: var(--bs-white);
+}
+
+.services-inner {
+    margin: 0 0 15px 0;
+    padding: 20px 15px;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+  }
+  
+  .services-item {
+    margin-bottom: 15px;
+  }
+  
+/*** Services End ***/
+
+
+
+/*--------------------------------------------------------------
+# Pricing Section
+--------------------------------------------------------------*/
+.pricing .pricing-item {
+    padding: 60px 40px;
+    box-shadow: 0 3px 20px -2px rgba(108, 117, 125, 0.15);
+    background: #fff;
+    height: 100%;
+    border-top: 4px solid #fff;
+    border-radius: 5px;
+  }
+  
+  .pricing h3 {
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: var(--color-secondary);
+  }
+  
+  .pricing h4 {
+    font-size: 48px;
+    color: var(--color-primary);
+    font-weight: 400;
+    font-family: var(--font-primary);
+    margin-bottom: 25px;
+  }
+  
+  .pricing h4 sup {
+    font-size: 28px;
+  }
+  
+  .pricing h4 span {
+    color: rgba(108, 117, 125, 0.8);
+    font-size: 18px;
+  }
+  
+  .pricing ul {
+    padding: 20px 0;
+    list-style: none;
+    color: #6c757d;
+    text-align: left;
+    line-height: 20px;
+  }
+  
+  .pricing ul li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .pricing ul i {
+    color: #059652;
+    font-size: 24px;
+    padding-right: 3px;
+  }
+  
+  .pricing ul .na {
+    color: rgba(108, 117, 125, 0.5);
+  }
+  
+  .pricing ul .na i {
+    color: rgba(108, 117, 125, 0.5);
+  }
+  
+  .pricing ul .na span {
+    text-decoration: line-through;
+  }
+  
+  .pricing .buy-btn {
+    display: inline-block;
+    padding: 12px 35px;
+    border-radius: 4px;
+    color: var(--color-primary);
+    transition: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--font-primary);
+    transition: 0.3s;
+    border: 1px solid var(--color-primary);
+  }
+  
+  .pricing .buy-btn:hover {
+    background: var(--color-primary);
+    color: #fff;
+  }
+  
+  .pricing .featured {
+    border-top-color: var(--color-primary);
+  }
+  
+  .pricing .featured .buy-btn {
+    background: var(--color-primary);
+    color: #fff;
+  }
+
+  .pricing-item {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  
+  .pricing-item .btn-custom {
+    display: block;
+    margin: 0 auto;
+  }
+  .social-links a {
+    color: #333;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .social-links a:hover {
+    color: #007bff;
+  }
+  .col-md-6 {
+    @media (min-width: 992px) {
+      width: 60%;
+    }
+  }
+  
+  .form-control {
+    margin-bottom: 15px;
+  }
+  .btn-custom-contact {
+    width: 100%;
+  }
+  
+
+
+
+
+
+/*child*/
+
+
+	/* Details 2 */
+	.basic-3 .decoration-star {
+		top: 140px;
+		right: -200px;
+		width: 500px;
+	}
+
+	.basic-3 .text-container {
+		margin-top: 6rem;
+		margin-right: 3rem;
+	}
+
+	.basic-3 h2 {
+		width: 95%;
+	}
+	/* end of details 2 */
+
+
+
+
+
+
+
+
+  
+  @media (max-width: 992px) {
+    .pricing .box {
+      max-width: 60%;
+      margin: 0 auto 30px auto;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .pricing .box {
+      max-width: 80%;
+      margin: 0 auto 30px auto;
+    }
+  }
+  
+  @media (max-width: 420px) {
+    .pricing .box {
+      max-width: 100%;
+      margin: 0 auto 30px auto;
+    }
+  }
+  
 
 @media (max-width: 767.98px) {
     .footer .copyright p,

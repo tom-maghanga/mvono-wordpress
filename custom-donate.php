@@ -39,91 +39,38 @@ get_header();
 </div>
 <!-- Sidebar Widget End -->
 
-<!-- Donate Start -->
-<div class="donate" data-parallax="scroll" data-image-src="<?php echo esc_url(get_template_directory_uri() . '/img/donate.jpg'); ?>">
-    <div class="container">
-        <div class="row align-items-center justify-content-center"> <!-- Added justify-content-center class -->
-            <div class="col-lg-12">
-                <div class="donate-content">
-                    <div class="section-header">
-                        <p><?php the_field('donate_title'); ?></p>
-                        <h2><?php the_field('donate_head'); ?></h2>
-                    </div>
-                    <div class="donate-text">
-                        <p>
-                            <?php the_field('donate_text'); ?>
-                        </p>
+
+<?php
+// Get services data from ACF
+$donate_ways = get_field('donate_ways');
+
+if ($donate_ways) {
+    echo '<div class="row g-5 services-inner">'; // Start row
+
+    foreach ($donate_ways as $donate) {
+        $donate_title = $donate['donate_title'];
+        $donate_description = $donate['donate_description'];
+        $donate_icon = wp_get_attachment_image_url($donate['service_icon'], 'thumbnail');
+
+        ?>
+        <div class="col-lg-4 wow fadeIn" data-wow-delay=".3s">
+            <div class="services-item bg-light">
+                <div class="p-4 text-center services-content">
+                    <div class="services-content-icon">
+                        <i class="<?php echo $donate_icon; ?> fa-7x mb-4 text-primary"></i>
+                        <h4 class="mb-3"><?php echo $donate_title; ?></h4>
+                        <p class="mb-4"><?php echo $donate_description; ?></p>
+                        <a href="/donate-now" class="btn btn-custom px-5 py-3 rounded-pill">Learn More</a>
                     </div>
                 </div>
             </div>
-
-            <?php
-            // Check if bank details exist.
-            if (have_rows('bank_details')) {
-                while (have_rows('bank_details')) : the_row();
-            ?>
-                    <div class="col-lg-5">
-                        <div class="donate-form bank-donate">
-                            <button class="donate-btn donate-btn-custom bank-title">
-                                <?php the_sub_field('button_text'); ?>
-                            </button>
-                            <ul>
-                                <?php
-                                $description_lines = explode("\n", esc_html(get_sub_field('bank_details')));
-                                foreach ($description_lines as $line) {
-                                    echo '<li>' . esc_html($line) . '</li>';
-                                }
-                                ?>
-                            </ul>
-                            <div>
-                                <button class="donate-btn donate-btn-custom">
-                                    <?php the_sub_field('thank_you_button'); ?>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-            <?php
-                endwhile;
-            }
-            ?>
-
-            <?php
-            // Check if mpesa details exist.
-            if (have_rows('mpesa_details')) {
-                while (have_rows('mpesa_details')) : the_row();
-            ?>
-                    <div class="col-lg-5">
-                        <div class="donate-form mpesa-donate">
-                            <button class="donate-btn donate-btn-custom mpesa-title">
-                                <?php the_sub_field('button_text'); ?>
-                            </button>
-                            <ul>
-                                <?php
-                                $description_lines = explode("\n", esc_html(get_sub_field('mpesa_details')));
-                                foreach ($description_lines as $line) {
-                                    echo '<li>' . esc_html($line) . '</li>';
-                                }
-                                ?>
-                            </ul>
-                            <div>
-                                <button class="donate-btn donate-btn-custom">
-                                    <?php the_sub_field('thank_you_button'); ?>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-            <?php
-                endwhile;
-            }
-            ?>
-
         </div>
-    </div>
-</div>
-<!-- Donate End -->
+        <?php
+    }
 
-
-
+    echo '</div>'; // End row
+}
+?>
 <?php
 get_footer();
 ?>
